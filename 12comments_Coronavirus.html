@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el1854825648472540969975961301"></div>
+<script type="text/javascript">
+
+var ldavis_el1854825648472540969975961301_data = {"mdsDat": {"x": [-0.23057391158573948, 0.29040704236335735, 0.2434793378129004, -0.162173974010679, -0.14113849457983926], "y": [0.010697340605160683, 0.32722504945219283, -0.36396515245329997, 0.012754667514761576, 0.01328809488118464], "topics": [1, 2, 3, 4, 5], "cluster": [1, 1, 1, 1, 1], "Freq": [35.13920538039548, 19.346530076853185, 15.961460502684622, 14.78344909817076, 14.769354941895957]}, "tinfo": {"Term": ["people", "remove", "death", "virus", "work", "people", "virus", "work", "death", "remove", "remove", "virus", "work", "death", "people", "death", "people", "virus", "work", "remove", "virus", "people", "work", "death", "remove", "work", "people", "virus", "death", "remove"], "Freq": [20734.0, 11394.0, 9399.0, 8687.0, 8680.0, 20695.25769780169, 0.17660491414197735, 0.16823036669884867, 0.16652776504005448, 0.16818263196288671, 11393.74591812446, 0.20768776486480964, 0.19193882126675285, 0.19000493319429507, 0.19063338204746472, 9398.87461698838, 1.1945484103437674, 0.2538231136643317, 0.24960080020384093, 0.24816836789219868, 8686.316191583695, 19.90161037723912, 0.2570041589910121, 0.2780921901982093, 0.25477132409319436, 8679.729805414292, 18.22950728621096, 0.2482909671494929, 0.24510763013909043, 0.2538090297831143], "Total": [20734.0, 11394.0, 9399.0, 8687.0, 8680.0, 20734.773997257533, 8687.202598343516, 8680.596579561452, 9399.754349506951, 11394.670849478192, 11394.670849478192, 8687.202598343516, 8680.596579561452, 9399.754349506951, 20734.773997257533, 9399.754349506951, 20734.773997257533, 8687.202598343516, 8680.596579561452, 11394.670849478192, 8687.202598343516, 20734.773997257533, 8680.596579561452, 9399.754349506951, 11394.670849478192, 8680.596579561452, 20734.773997257533, 8687.202598343516, 9399.754349506951, 11394.670849478192], "Category": ["Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5"], "logprob": [5.0, 4.0, 3.0, 2.0, 1.0, -0.0, -11.6715, -11.7201, -11.7303, -11.7204, -0.0001, -10.9126, -10.9915, -11.0016, -10.9983, -0.0002, -8.9708, -10.5197, -10.5364, -10.5422, -0.0024, -6.0811, -10.4305, -10.3517, -10.4393, -0.0022, -6.1679, -10.4641, -10.477, -10.4421], "loglift": [5.0, 4.0, 3.0, 2.0, 1.0, 1.0439, -9.7576, -9.8054, -9.8952, -10.0778, 1.6426, -8.9987, -9.0768, -9.1665, -9.9543, 1.8349, -7.9268, -8.6057, -8.6217, -8.8996, 1.9116, -5.0371, -8.5158, -8.5166, -8.7966, 1.9125, -5.1239, -8.5501, -8.6419, -8.7995]}, "token.table": {"Topic": [3, 1, 3, 4, 5, 2, 4, 5], "Freq": [0.9999197479552228, 0.9980817732924028, 4.822816010110668e-05, 0.0009645632020221336, 0.0008681068818199203, 0.9999411260327696, 0.9998615666746686, 0.9999312743593157], "Term": ["death", "people", "people", "people", "people", "remove", "virus", "work"]}, "R": 5, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [2, 4, 3, 1, 5]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el1854825648472540969975961301", ldavis_el1854825648472540969975961301_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el1854825648472540969975961301", ldavis_el1854825648472540969975961301_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el1854825648472540969975961301", ldavis_el1854825648472540969975961301_data);
+            })
+         });
+}
+</script>

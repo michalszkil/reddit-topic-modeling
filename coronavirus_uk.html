@@ -1,0 +1,119 @@
+<html>
+
+<head>
+<title>Reddit Topic Modeling</title>
+</head>
+
+<body>
+
+<div class = "reddit">
+<h1>r/Coronavirus_UK</h1><br>
+<a href="index.html">Coronavirus</a><br>
+<a href="coronavirus_us.html">Coronavirus_US</a><br>
+<a href="coronavirus_uk.html">Coronavirus_UK</a><br>
+<a href="china_flu.html">China_Flu</a>
+</div>
+<br>
+
+<div class="slider">
+
+  <div class="slides">
+    <div id="slide-1">
+	<div class = "lda">
+	<p>2020_03_01__2020_05_31</p>	
+      <iframe src="1comments_Coronavirus_UK.html" height = "800" width = "1620" title="Iframe"></iframe>
+	</div>
+    </div>
+    <div id="slide-2">
+	<div class = "lda">
+	<p>2020_09_01__2021_02_15</p>	
+      <iframe src="2comments_Coronavirus_UK.html" height = "800" width = "1620"  title="Iframe"></iframe>
+	</div>
+    </div>
+    <div id="slide-3">
+	<div class = "lda">
+	<p>US2021_02_15__2021_04_11</p>	
+      <iframe src="3comments_Coronavirus_UK.html" height = "800" width = "1620"  title="Iframe"></iframe>
+	</div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  
+  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.reddit {
+
+}
+.lda {
+position: static;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #74ABE2, #5563DE);
+  font-family: 'Ropa Sans', sans-serif;
+}
+</style>
+</html>

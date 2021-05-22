@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el2124817165441189601066413623"></div>
+<script type="text/javascript">
+
+var ldavis_el2124817165441189601066413623_data = {"mdsDat": {"x": [-0.18096489834995283, -0.287076876645946, -0.17241326902745996, 0.34411569989029916, 0.2963393441330594], "y": [0.24277166212888604, -0.000981309395127593, -0.2689528719754905, -0.22540289887757564, 0.2525654181193076], "topics": [1, 2, 3, 4, 5], "cluster": [1, 1, 1, 1, 1], "Freq": [39.29896360621179, 15.982351827686184, 15.343792558040176, 14.856076819253975, 14.518815188807874]}, "tinfo": {"Term": ["week", "government", "work", "people", "virus", "virus", "people", "government", "week", "work", "work", "people", "week", "virus", "government", "work", "virus", "government", "week", "people", "week", "virus", "people", "government", "work", "government", "people", "virus", "week", "work"], "Freq": [9326.0, 9060.0, 13538.0, 25364.0, 5494.0, 5491.99729725982, 19181.370828289044, 0.16328001107246515, 0.1607728306551337, 0.1620952634428691, 3904.8001402543823, 6128.673921801338, 0.5181648436557937, 0.2637649108097389, 0.2636909144258551, 9632.500505236205, 0.2966321191735341, 0.3420642050197185, 0.235099220328706, 0.225163145262559, 9325.782187207637, 0.23849982690366342, 0.7881553390309581, 0.2392681512128705, 0.33992021359601793, 9059.760480200235, 53.20412917450836, 2.179879111445135, 0.24809153360420205, 0.24510858347918263], "Total": [9326.0, 9060.0, 13538.0, 25364.0, 5494.0, 5494.976073228152, 25364.262197749187, 9060.768783481966, 9326.94431563588, 13538.047769551105, 13538.047769551105, 25364.262197749187, 9326.94431563588, 5494.976073228152, 9060.768783481966, 13538.047769551105, 5494.976073228152, 9060.768783481966, 9326.94431563588, 25364.262197749187, 9326.94431563588, 5494.976073228152, 25364.262197749187, 9060.768783481966, 13538.047769551105, 9060.768783481966, 25364.262197749187, 5494.976073228152, 9326.94431563588, 13538.047769551105], "Category": ["Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5"], "logprob": [5.0, 4.0, 3.0, 2.0, 1.0, -1.5025, -0.2518, -11.9258, -11.9413, -11.9331, -0.9438, -0.4931, -9.8712, -10.5465, -10.5468, -0.0001, -10.3883, -10.2458, -10.6208, -10.6639, -0.0002, -10.5741, -9.3788, -10.5709, -10.2198, -0.0061, -5.1436, -8.3385, -10.5117, -10.5238], "loglift": [5.0, 4.0, 3.0, 2.0, 1.0, 0.9334, 0.6546, -9.99, -10.0345, -10.3989, 0.5904, 0.4133, -7.9644, -8.1106, -8.611, 1.5341, -7.9524, -8.31, -8.714, -9.7576, 1.9066, -8.1382, -8.4724, -8.6351, -8.6855, 1.9296, -4.2372, -5.9026, -8.6049, -8.9896]}, "token.table": {"Topic": [5, 1, 2, 4, 5, 1, 5, 2, 4, 2, 3], "Freq": [0.9999151525107486, 0.756221484009975, 0.2416391989727927, 3.9425550493195085e-05, 0.0020895541761393396, 0.9994584010578951, 0.00036396882777053717, 0.00010721625069891108, 0.9998987540180446, 0.28844631563369655, 0.7115501558257104], "Term": ["government", "people", "people", "people", "people", "virus", "virus", "week", "week", "work", "work"]}, "R": 5, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [5, 2, 3, 4, 1]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el2124817165441189601066413623", ldavis_el2124817165441189601066413623_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el2124817165441189601066413623", ldavis_el2124817165441189601066413623_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el2124817165441189601066413623", ldavis_el2124817165441189601066413623_data);
+            })
+         });
+}
+</script>
